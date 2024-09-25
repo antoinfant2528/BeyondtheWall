@@ -1,4 +1,3 @@
-<!-- public/login.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
   <title>Login</title>
   <style>
     body {
-      background: url("assets/loginpic.jpg");
+      background: url("assets/360_F_571978179_m6GpeKbOt4aJ5WWfSKSWHEAdPj8pFGJz-transformed.jpg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -55,17 +54,18 @@
     }
 
     button {
-      background-color: rgb(96, 234, 96);
-      color: black;
-      font-weight: 800;
-      font-size: 15px;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: rgb(62, 236, 62);
-      box-shadow: rgba(3, 214, 21, 0.3) 0px 0px 0px 3px;
+        border: 1px solid #555; /* Dark border */
+        background-color: #c4a719; /* Gold base color */
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Highlight */
+                    inset 0 -1px 3px rgba(0, 0, 0, 0.3), /* Depth */
+                    0 3px 6px rgba(0, 0, 0, 0.5), /* Outer shadow for a worn look */
+                    1px 1px 4px rgba(0, 0, 0, 0.6); /* Rough shadow edges */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 12px 30px;
+        font-family: 'Cinzel',serif;
     }
 
     @media (max-width: 768px) {
@@ -100,9 +100,30 @@
       }
     }
   </style>
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent the form from submitting by default
+
+      const username = document.forms["loginForm"]["username"].value;
+      const password = document.forms["loginForm"]["password"].value;
+
+      if (username === "") {
+        alert("Please enter your username.");
+        return false;
+      }
+
+      if (password === "") {
+        alert("Please enter your password.");
+        return false;
+      }
+
+      // If both username and password are filled, proceed to the next page
+      location.href = 'round_1.html'; // Redirect to the next page
+    }
+  </script>
 </head>
 <body>
-  <form action="/login" method="POST">
+  <form name="loginForm" action="/login.html" method="POST" onsubmit="validateForm(event)">
     <h1>Login</h1>
     <input type="text" name="username" placeholder="Username" required>
     <input type="password" name="password" placeholder="Password" required>

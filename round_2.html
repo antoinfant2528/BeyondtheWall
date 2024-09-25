@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round_2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: absolute;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-image: url("assets/bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .container {
+      background-color: #000000;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      max-width: 250px;
+      text-align: center;
+    }
+
+    .submit-button {
+      border: 1px solid #555;
+      background-color: #c4a719;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                  inset 0 -1px 3px rgba(0, 0, 0, 0.3),
+                  0 3px 6px rgba(0, 0, 0, 0.5),
+                  1px 1px 4px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 30px;
+      font-family: 'Cinzel', serif;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color: white;">Round-2</h1>
+  <div class="container">
+    <div class="question">
+      <h3>Find the Hidden Clue</h3>
+    </div>
+    <div class="clue">
+      <p style="color: #ffffff;">Clue</p>
+    </div>
+    <div class="guess">
+      <input type="text" class="input-field" placeholder="Try to Claim the Victory" />
+      <button class="submit-button" onclick="validateInput()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function validateInput() {
+      const inputField = document.querySelector('.input-field').value.trim();
+      
+      // Check if the input is empty
+      if (inputField === "") {
+        alert("Fill the text box");
+      } else {
+        // Proceed to round_2.html if the input is not empty
+        location.href = 'round_3.html';
+      }
+    }
+  </script>
+
+</body>
+</html>
