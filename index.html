@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quest Beyond The Wall</title>
+  <link rel="stylesheet" href="LandingPage.css"> <!-- Assuming the same CSS file -->
+  <style>
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-image: url('assets/landingBackground.avif');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding: 20px;
+        font-family:'Cinzel',serif ;
+        font-weight:bold;
+      }
+      .quest{
+        color: white;
+        font-size: larger;
+        margin-bottom: 5px;
+        font-size: 30px;
+      }
+      .beyond{
+        color: white;
+        font-size: larger;
+        margin-bottom: 5px;
+        font-size: 35px;
+        margin-top: 5px;
+      }
+      .the{
+        color: white;
+        font-size: larger;
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .wall{
+        color: white;
+        font-size: larger;
+        margin-top: 5px;
+        font-size:30px ;
+      }
+      .description p {
+        font-size: 18px;
+        color: #ddd;
+        margin: 10px 0;
+        margin-top:30%;
+        font-family:'Cinzel',serif ;
+        font-weight:bold;
+      }
+      
+    
+      .description button {
+        margin-top: 40%;
+        border: 1px solid #555; /* Dark border */
+        background-color: #c4a719; /* Gold base color */
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), /* Highlight */
+                    inset 0 -1px 3px rgba(0, 0, 0, 0.3), /* Depth */
+                    0 3px 6px rgba(0, 0, 0, 0.5), /* Outer shadow for a worn look */
+                    1px 1px 4px rgba(0, 0, 0, 0.6); /* Rough shadow edges */
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 12px 30px;
+        font-family: 'Cinzel',serif;
+      }
+  </style>
+</head>
+<body>
+  <div class="landing-page">
+      <h2 class="quest">Quest</h2>
+      <h1 class="beyond">Beyond</h1>
+      <h5 class="the">The</h5>
+      <h2 class="wall">Wall</h2>
+      <div class="description">
+        <p>
+          Embark on a thrilling adventure, solving puzzles, outwitting rivals, and uncovering hidden clues. 
+          With strategy and teamwork, conquer the mystical world and emerge victorious in this immersive treasure hunt where skill reigns supreme.
+        </p>
+        <button onclick="location.href='login.html'">Swear Your Oath</button>
+      </div>
+  </div>
+</body>
+</html>

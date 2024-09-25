@@ -1,0 +1,68 @@
+<!-- public/login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body{
+      background:url("assets/loginpic.jpg") ;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 400px;
+      padding: 5px;
+      margin-top: 200px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      background-color:rgb(255,255,255,0.1) ;
+      backdrop-filter: blur(2px);
+    }
+    h1{
+      margin-top: 100px;
+      color: antiquewhite;
+    }
+    input,button{
+      padding: 10px;
+      margin-right:auto;
+      margin-left: auto;
+      margin-top: 15px;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+      transition: 5ms ease;
+    }
+    button{
+      background-color:rgb(96, 234, 96);
+      color: black;
+      font-weight: 800;
+      font-size:15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    input:hover{
+      transform: scale(1.1);
+      border-bottom:3px solid black ;
+    }
+    button:hover{
+      background-color: rgb(62, 236, 62);
+      color: rgb(0, 0, 0);
+      box-shadow: rgba(3, 214, 21, 0.3) 0px 0px 0px 3px;
+
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <form action="/login" method="POST">
+      <h1>Login</h1>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </center>
+</body>
+</html>
